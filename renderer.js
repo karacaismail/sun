@@ -55,7 +55,11 @@ class PresentationRenderer {
             }
 
             // Yeni instance oluştur
-            this.impressInstance = impress();
+            if (typeof impress === 'function') {
+                this.impressInstance = impress();
+            } else {
+                throw new Error('Impress.js yüklenemedi');
+            }
             
             if (!this.impressInstance) {
                 throw new Error('Impress.js başlatılamadı');
@@ -572,4 +576,10 @@ function initializePresentation() {
         }
     }
 }
+
+
+// Global renderer instance oluştur
+window.presentationRenderer = new PresentationRenderer();
+
+console.log('PresentationRenderer global instance oluşturuldu');
 

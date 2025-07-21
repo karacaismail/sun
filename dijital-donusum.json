@@ -1,0 +1,145 @@
+{
+    "title": "Dijital Dönüşüm Stratejileri",
+    "subtitle": "Teknoloji Odaklı İş Modeli Yeniliği",
+    "author": "Manus AI",
+    "date": "2025",
+    "slides": [
+        {
+            "id": "slide-0",
+            "type": "title",
+            "title": "Dijital Dönüşüm Stratejileri",
+            "subtitle": "Teknoloji Odaklı İş Modeli Yeniliği",
+            "content": "Geleceğin iş dünyasına hazırlık rehberi",
+            "position": { "x": 0, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-1",
+            "type": "content",
+            "title": "Dijital Dönüşüm Nedir?",
+            "subtitle": "Temel Tanım ve Kapsam",
+            "content": "Dijital dönüşüm, **dijital teknolojilerin** iş süreçlerine, kültüre ve müşteri deneyimlerine entegre edilmesi yoluyla **değer yaratma** ve **rekabet avantajı** sağlama sürecidir.",
+            "position": { "x": 1000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-2",
+            "type": "list",
+            "title": "Dijital Dönüşümün Temel Bileşenleri",
+            "subtitle": "Kapsamlı Yaklaşım Gereklilikleri",
+            "items": [
+                "**Teknoloji Altyapısı**: Bulut bilişim, IoT, yapay zeka entegrasyonu",
+                "**Veri Analitiği**: Büyük veri işleme ve iş zekası sistemleri",
+                "**Süreç Otomasyonu**: İş akışlarının dijitalleştirilmesi",
+                "**Müşteri Deneyimi**: Omnichannel yaklaşım ve kişiselleştirme",
+                "**Organizasyonel Kültür**: Çeviklik, yenilikçilik ve öğrenme odaklılık"
+            ],
+            "position": { "x": 2000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-3",
+            "type": "content",
+            "title": "Dijital Olgunluk Seviyeleri",
+            "subtitle": "Dönüşüm Yolculuğunun Aşamaları",
+            "content": "**Başlangıç**, **gelişen**, **tanımlı**, **yönetilen** ve **optimize** olmak üzere beş seviyede dijital olgunluk değerlendirmesi yapılır.",
+            "position": { "x": 3000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-4",
+            "type": "chart",
+            "title": "Dijital Teknoloji Yatırım Alanları",
+            "subtitle": "Öncelik Sıralaması ve Bütçe Dağılımı",
+            "content": "**Bulut altyapısı** %30, **veri analitiği** %25, **otomasyon** %20, **siber güvenlik** %15, **AI/ML** %10 oranında yatırım dağılımı önerilir.",
+            "position": { "x": 4000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-5",
+            "type": "content",
+            "title": "Müşteri Deneyimi Dönüşümü",
+            "subtitle": "Dijital Dokunuş Noktaları",
+            "content": "**Omnichannel** yaklaşım ile müşterilerin tüm dijital ve fiziksel dokunuş noktalarında **tutarlı** ve **kişiselleştirilmiş** deneyim sunulması hedeflenir.",
+            "position": { "x": 5000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-6",
+            "type": "list",
+            "title": "Dijital Dönüşüm Engelleri",
+            "subtitle": "Yaygın Zorluklar ve Çözüm Yaklaşımları",
+            "items": [
+                "**Organizasyonel Direnç**: Değişim yönetimi ve eğitim programları",
+                "**Eski Sistem Entegrasyonu**: Aşamalı modernizasyon stratejisi",
+                "**Yetenek Açığı**: Dijital beceri geliştirme ve işe alım",
+                "**Bütçe Kısıtları**: ROI odaklı aşamalı yatırım planlaması",
+                "**Siber Güvenlik Riskleri**: Kapsamlı güvenlik çerçevesi"
+            ],
+            "position": { "x": 6000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-7",
+            "type": "content",
+            "title": "Yapay Zeka ve Otomasyon",
+            "subtitle": "İş Süreçlerinde AI Entegrasyonu",
+            "content": "**Makine öğrenmesi**, **doğal dil işleme** ve **robotik süreç otomasyonu** ile operasyonel verimlilik artışı ve **karar verme** süreçlerinin iyileştirilmesi sağlanır.",
+            "position": { "x": 7000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-8",
+            "type": "comparison",
+            "title": "Geleneksel vs Dijital İş Modelleri",
+            "items": [
+                "Geleneksel: Hiyerarşik yapı, manuel süreçler, reaktif yaklaşım",
+                "Dijital: Çevik organizasyon, otomatik süreçler, proaktif yaklaşım",
+                "Geleneksel: Sınırlı veri kullanımı, deneyim odaklı kararlar",
+                "Dijital: Veri odaklı kararlar, gerçek zamanlı analitik"
+            ],
+            "position": { "x": 8000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-9",
+            "type": "content",
+            "title": "Dijital Dönüşüm ROI Ölçümü",
+            "subtitle": "Başarı Metrikleri ve KPI'lar",
+            "content": "**Operasyonel verimlilik**, **müşteri memnuniyeti**, **gelir artışı** ve **maliyet azaltımı** gibi nicel metriklerle dönüşümün başarısı ölçülmelidir.",
+            "position": { "x": 9000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-10",
+            "type": "quote",
+            "title": "Satya Nadella",
+            "content": "Her şirket artık bir teknoloji şirketi olmak zorunda.",
+            "subtitle": "Microsoft CEO",
+            "position": { "x": 10000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-11",
+            "type": "title",
+            "title": "Teşekkürler",
+            "subtitle": "Dijital Geleceğe Hazır Olun",
+            "content": "Dijital Dönüşüm Stratejileri sunumu tamamlandı",
+            "position": { "x": 11000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        }
+    ]
+}
+

@@ -161,6 +161,32 @@
         .hidden {
             display: none !important;
         }
+        
+        .json-selector {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .json-selector select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            background: white;
+            font-weight: 500;
+        }
+        
+        .json-selector label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
     </style>
 </head>
 <body>
@@ -176,6 +202,14 @@
     <!-- Slide Counter -->
     <div id="slide-counter" class="slide-counter hidden">
         <span id="current-slide">1</span> / <span id="total-slides">1</span>
+    </div>
+    
+    <!-- JSON Selector -->
+    <div id="json-selector" class="json-selector hidden">
+        <label for="presentation-select">Sunum Seçin:</label>
+        <select id="presentation-select" onchange="loadSelectedPresentation()">
+            <option value="">Yükleniyor...</option>
+        </select>
     </div>
     
     <!-- Presentation Container -->
@@ -207,61 +241,162 @@
         </button>
     </div>
     
-    <!-- Data Import Controls -->
-    <div id="data-controls" class="fixed top-20 left-20 z-50 bg-white p-4 rounded-lg shadow-lg hidden">
-        <h3 class="text-lg font-semibold mb-3">Sunum Yükle</h3>
-        <div class="space-y-2">
-            <button onclick="loadPresentation('data1.js')" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                İşletme Stratejisi Temelleri
-            </button>
-            <button onclick="loadPresentation('data2.js')" class="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-                Rekabet Analizi
-            </button>
-            <button onclick="loadPresentation('data3.js')" class="w-full px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">
-                Dijital Dönüşüm Stratejileri
-            </button>
-            <button onclick="loadPresentation('data4.js')" class="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
-                Sürdürülebilir Büyüme
-            </button>
-        </div>
-        <button onclick="toggleDataControls()" class="mt-3 w-full px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
-            Kapat
-        </button>
-    </div>
-    
-    <!-- Toggle Data Controls Button -->
-    <button onclick="toggleDataControls()" class="fixed top-20 left-20 z-40 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-        </svg>
-    </button>
-    
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-    <script src="data.js"></script>
     <script src="engine.js"></script>
     <script src="renderer.js"></script>
     
     <script>
-        // Global functions for data controls
-        function toggleDataControls() {
-            const controls = document.getElementById('data-controls');
-            controls.classList.toggle('hidden');
+        // Global variables
+        let availablePresentations = [];
+        let currentPresentationData = null;
+        
+        // Load available JSON files
+        async function loadAvailablePresentations() {
+            try {
+                // Predefined presentations
+                const presentations = [
+                    { file: 'demo.json', title: 'Demo - İşletme Stratejisi Temelleri' },
+                    { file: 'rekabet-analizi.json', title: 'Rekabet Analizi ve Pazar Dinamikleri' },
+                    { file: 'dijital-donusum.json', title: 'Dijital Dönüşüm Stratejileri' },
+                    { file: 'surdurulebilir-buyume.json', title: 'Sürdürülebilir Büyüme Stratejileri' },
+                    { file: 'data.js', title: 'İşletme Stratejisi Temelleri (JS)' },
+                    { file: 'data2.js', title: 'Rekabet Analizi (JS)' },
+                    { file: 'data3.js', title: 'Dijital Dönüşüm Stratejileri (JS)' },
+                    { file: 'data4.js', title: 'Sürdürülebilir Büyüme (JS)' }
+                ];
+                
+                availablePresentations = presentations;
+                populatePresentationSelector();
+                
+                // Load default presentation (demo.json)
+                await loadPresentation('content/demo.json', true);
+                
+            } catch (error) {
+                console.error('Sunumlar yüklenirken hata:', error);
+            }
         }
         
-        function loadPresentation(dataFile) {
-            // Dynamically load different data files
-            const script = document.createElement('script');
-            script.src = dataFile;
-            script.onload = function() {
-                // Re-initialize presentation with new data
-                if (window.presentationData) {
+        function populatePresentationSelector() {
+            const select = document.getElementById('presentation-select');
+            select.innerHTML = '';
+            
+            availablePresentations.forEach((presentation, index) => {
+                const option = document.createElement('option');
+                option.value = presentation.file;
+                option.textContent = presentation.title;
+                if (index === 0) option.selected = true; // Default to demo.json
+                select.appendChild(option);
+            });
+        }
+        
+        async function loadSelectedPresentation() {
+            const select = document.getElementById('presentation-select');
+            const selectedFile = select.value;
+            
+            if (selectedFile) {
+                const filePath = selectedFile.endsWith('.json') ? 
+                    `content/${selectedFile}` : 
+                    `content/${selectedFile}`;
+                
+                await loadPresentation(filePath, selectedFile.endsWith('.json'));
+            }
+        }
+        
+        async function loadPresentation(filePath, isJson = false) {
+            try {
+                showLoading();
+                
+                if (isJson) {
+                    // Load JSON file
+                    const response = await fetch(filePath);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    currentPresentationData = await response.json();
+                } else {
+                    // Load JS file dynamically
+                    const script = document.createElement('script');
+                    script.src = filePath;
+                    
+                    return new Promise((resolve, reject) => {
+                        script.onload = function() {
+                            if (window.presentationData) {
+                                currentPresentationData = window.presentationData;
+                                initializePresentation();
+                                resolve();
+                            } else {
+                                reject(new Error('Presentation data not found'));
+                            }
+                        };
+                        script.onerror = reject;
+                        document.head.appendChild(script);
+                    });
+                }
+                
+                if (currentPresentationData) {
                     initializePresentation();
                 }
-            };
-            document.head.appendChild(script);
-            toggleDataControls();
+                
+            } catch (error) {
+                console.error('Sunum yükleme hatası:', error);
+                showError(error.message);
+            }
         }
+        
+        function showLoading() {
+            const loading = document.getElementById('loading');
+            loading.classList.remove('hidden');
+            loading.innerHTML = `
+                <div class="spinner"></div>
+                <p class="text-lg font-semibold text-gray-700">Sunum yükleniyor...</p>
+            `;
+        }
+        
+        function showError(message) {
+            const loading = document.getElementById('loading');
+            loading.innerHTML = `
+                <div class="text-center">
+                    <div class="text-red-500 text-6xl mb-4">⚠️</div>
+                    <h2 class="text-xl font-semibold text-red-600 mb-2">Sunum Yüklenemedi</h2>
+                    <p class="text-gray-600">${message}</p>
+                    <button onclick="location.reload()" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                        Yeniden Dene
+                    </button>
+                </div>
+            `;
+        }
+        
+        function initializePresentation() {
+            try {
+                if (!currentPresentationData) {
+                    throw new Error('Sunum verisi bulunamadı');
+                }
+                
+                // Engine ile slide'ları parse et
+                const slides = window.presentationEngine.parseSlides(currentPresentationData);
+                
+                // Renderer ile DOM'a render et
+                window.presentationRenderer.renderToDOM(slides);
+                
+                // Impress.js'i başlat
+                window.presentationRenderer.initImpress();
+                
+                // Event'leri bağla
+                window.presentationRenderer.bindEvents();
+                
+                console.log('Sunum başarıyla başlatıldı');
+                
+            } catch (error) {
+                console.error('Sunum başlatma hatası:', error);
+                showError(error.message);
+            }
+        }
+        
+        // Page load event
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAvailablePresentations();
+        });
     </script>
 </body>
 </html>

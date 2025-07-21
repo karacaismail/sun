@@ -14,14 +14,19 @@
 
 ```
 html-presentation-system/
-├── index.html          # Ana HTML dosyası
-├── engine.js           # JSON parser ve HTML generator
-├── renderer.js         # DOM manipülasyonu ve impress.js entegrasyonu
-├── data.js            # İşletme Stratejisi Temelleri (29 slide)
-├── data2.js           # Rekabet Analizi (30 slide)
-├── data3.js           # Dijital Dönüşüm Stratejileri (30 slide)
-├── data4.js           # Sürdürülebilir Büyüme (30 slide)
-└── README.md          # Bu dosya
+├── index.html              # Ana HTML dosyası
+├── engine.js               # JSON parser ve HTML generator
+├── renderer.js             # DOM manipülasyonu ve impress.js entegrasyonu
+├── content/                # JSON ve JS sunum dosyaları
+│   ├── demo.json          # Demo - İşletme Stratejisi Temelleri
+│   ├── rekabet-analizi.json # Rekabet Analizi ve Pazar Dinamikleri
+│   ├── dijital-donusum.json # Dijital Dönüşüm Stratejileri
+│   ├── surdurulebilir-buyume.json # Sürdürülebilir Büyüme Stratejileri
+│   ├── data.js            # İşletme Stratejisi Temelleri (JS)
+│   ├── data2.js           # Rekabet Analizi (JS)
+│   ├── data3.js           # Dijital Dönüşüm Stratejileri (JS)
+│   └── data4.js           # Sürdürülebilir Büyüme (JS)
+└── README.md              # Bu dosya
 ```
 
 ## Kullanım

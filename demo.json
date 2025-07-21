@@ -1,0 +1,144 @@
+{
+    "title": "İşletme Stratejisi Temelleri",
+    "subtitle": "Modern İş Dünyasında Stratejik Yönetim",
+    "author": "Manus AI",
+    "date": "2025",
+    "slides": [
+        {
+            "id": "slide-0",
+            "type": "title",
+            "title": "İşletme Stratejisi Temelleri",
+            "subtitle": "Modern İş Dünyasında Stratejik Yönetim",
+            "content": "Başarılı işletmelerin arkasındaki stratejik düşünce",
+            "position": { "x": 0, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-1",
+            "type": "content",
+            "title": "Strateji Nedir?",
+            "subtitle": "Temel Tanım ve Kavramlar",
+            "content": "Strateji, bir organizasyonun uzun vadeli hedeflerine ulaşmak için kaynaklarını nasıl kullanacağını belirleyen kapsamlı bir plandır. **Rekabet avantajı** yaratmak ve **sürdürülebilir büyüme** sağlamak için kritik öneme sahiptir.",
+            "position": { "x": 1000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-2",
+            "type": "list",
+            "title": "Stratejinin Temel Bileşenleri",
+            "subtitle": "Her Başarılı Stratejinin Sahip Olması Gerekenler",
+            "items": [
+                "**Vizyon ve Misyon**: Organizasyonun gelecek hedefleri ve varoluş amacı",
+                "**Çevresel Analiz**: İç ve dış faktörlerin değerlendirilmesi",
+                "**Rekabet Analizi**: Rakiplerin güçlü ve zayıf yönlerinin incelenmesi",
+                "**Kaynak Yönetimi**: Mevcut kaynakların optimal kullanımı",
+                "**Uygulama Planı**: Stratejinin hayata geçirilmesi için somut adımlar"
+            ],
+            "position": { "x": 2000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-3",
+            "type": "content",
+            "title": "Stratejik Yönetim Süreci",
+            "subtitle": "Adım Adım Yaklaşım",
+            "content": "Stratejik yönetim, **analiz**, **formülasyon**, **uygulama** ve **değerlendirme** olmak üzere dört temel aşamadan oluşur. Bu süreç döngüsel bir yapıya sahiptir ve sürekli iyileştirme gerektirir.",
+            "position": { "x": 3000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-4",
+            "type": "content",
+            "title": "SWOT Analizi",
+            "subtitle": "Güçlü ve Zayıf Yönlerin Değerlendirilmesi",
+            "content": "SWOT analizi, organizasyonun **Güçlü Yönleri (Strengths)**, **Zayıf Yönleri (Weaknesses)**, **Fırsatları (Opportunities)** ve **Tehditleri (Threats)** sistematik olarak değerlendiren bir araçtır.",
+            "position": { "x": 4000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-5",
+            "type": "comparison",
+            "title": "İç Faktörler vs Dış Faktörler",
+            "items": [
+                "Güçlü yönler: Organizasyonun sahip olduğu avantajlar",
+                "Zayıf yönler: Geliştirilmesi gereken alanlar",
+                "Fırsatlar: Dış çevredeki olumlu gelişmeler",
+                "Tehditler: Dış çevredeki olumsuz faktörler"
+            ],
+            "position": { "x": 5000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-6",
+            "type": "content",
+            "title": "Porter'ın Beş Güç Modeli",
+            "subtitle": "Endüstri Analizi Çerçevesi",
+            "content": "Michael Porter'ın geliştirdiği bu model, bir endüstrideki **rekabet yoğunluğunu** ve **karlılık potansiyelini** belirleyen beş temel gücü analiz eder.",
+            "position": { "x": 6000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-7",
+            "type": "list",
+            "title": "Beş Güç Modeli Bileşenleri",
+            "items": [
+                "**Mevcut Rakipler Arası Rekabet**: Endüstrideki rekabet seviyesi",
+                "**Yeni Girişlerin Tehdidi**: Pazara giriş engellerinin düzeyi",
+                "**İkame Ürün Tehdidi**: Alternatif çözümlerin varlığı",
+                "**Tedarikçilerin Pazarlık Gücü**: Tedarik zincirindeki güç dengesi",
+                "**Müşterilerin Pazarlık Gücü**: Alıcıların etki düzeyi"
+            ],
+            "position": { "x": 7000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-8",
+            "type": "content",
+            "title": "Rekabet Stratejileri",
+            "subtitle": "Porter'ın Genel Stratejileri",
+            "content": "Porter, işletmelerin **maliyet liderliği**, **farklılaştırma** veya **odaklanma** stratejilerinden birini seçmesi gerektiğini savunur. Bu stratejiler arasında sıkışıp kalmak 'ortada kalma' riskini doğurur.",
+            "position": { "x": 8000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-9",
+            "type": "content",
+            "title": "Maliyet Liderliği Stratejisi",
+            "subtitle": "Düşük Maliyetle Rekabet Avantajı",
+            "content": "Bu strateji, **ölçek ekonomileri**, **deneyim eğrisi** ve **operasyonel verimlilik** yoluyla sektördeki en düşük maliyetli üretici olmayı hedefler. Walmart ve Southwest Airlines başarılı örneklerdir.",
+            "position": { "x": 9000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-10",
+            "type": "quote",
+            "title": "Peter Drucker",
+            "content": "Strateji, yarının fırsatları için bugünün kaynaklarını tahsis etme sanatıdır.",
+            "subtitle": "Yönetim Gurusu",
+            "position": { "x": 10000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-11",
+            "type": "title",
+            "title": "Teşekkürler",
+            "subtitle": "Sorularınız için açığız",
+            "content": "İşletme Stratejisi Temelleri sunumu tamamlandı",
+            "position": { "x": 11000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        }
+    ]
+}
+

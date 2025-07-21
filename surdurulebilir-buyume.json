@@ -1,0 +1,145 @@
+{
+    "title": "Sürdürülebilir Büyüme Stratejileri",
+    "subtitle": "Uzun Vadeli Değer Yaratma",
+    "author": "Manus AI",
+    "date": "2025",
+    "slides": [
+        {
+            "id": "slide-0",
+            "type": "title",
+            "title": "Sürdürülebilir Büyüme Stratejileri",
+            "subtitle": "Uzun Vadeli Değer Yaratma",
+            "content": "Gelecek nesiller için sorumlu iş yaklaşımları",
+            "position": { "x": 0, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-1",
+            "type": "content",
+            "title": "Sürdürülebilirlik Nedir?",
+            "subtitle": "Temel Kavramlar ve Boyutlar",
+            "content": "Sürdürülebilirlik, **ekonomik büyüme**, **çevresel koruma** ve **sosyal adalet** arasında denge kurarak gelecek nesillerin ihtiyaçlarını karşılama kapasitesini koruma yaklaşımıdır.",
+            "position": { "x": 1000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-2",
+            "type": "list",
+            "title": "ESG Kriterleri",
+            "subtitle": "Çevresel, Sosyal ve Yönetişim Faktörleri",
+            "items": [
+                "**Çevresel (Environmental)**: Karbon ayak izi, enerji verimliliği, atık yönetimi",
+                "**Sosyal (Social)**: Çalışan hakları, toplumsal etki, müşteri memnuniyeti",
+                "**Yönetişim (Governance)**: Kurumsal şeffaflık, etik değerler, risk yönetimi",
+                "**Raporlama**: Sürdürülebilirlik raporları ve performans ölçümü",
+                "**Paydaş Katılımı**: Tüm paydaşlarla aktif iletişim ve işbirliği"
+            ],
+            "position": { "x": 2000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-3",
+            "type": "content",
+            "title": "Döngüsel Ekonomi Modeli",
+            "subtitle": "Atıktan Değere Dönüşüm",
+            "content": "**Döngüsel ekonomi**, kaynakların **yeniden kullanımı**, **geri dönüşümü** ve **yenilenmesi** yoluyla atığı minimize eden ve değer yaratmaya odaklanan iş modelidir.",
+            "position": { "x": 3000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-4",
+            "type": "chart",
+            "title": "Sürdürülebilirlik Yatırım Alanları",
+            "subtitle": "Öncelik ve Etki Analizi",
+            "content": "**Yenilenebilir enerji** %35, **verimlilik projeleri** %25, **sosyal programlar** %20, **teknoloji yeniliği** %15, **tedarik zinciri** %5 yatırım dağılımı önerilir.",
+            "position": { "x": 4000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-5",
+            "type": "content",
+            "title": "Yeşil Teknolojiler",
+            "subtitle": "Çevre Dostu İnovasyon",
+            "content": "**Temiz teknolojiler**, **enerji verimliliği** çözümleri ve **akıllı sistemler** ile hem çevresel etki azaltılır hem de operasyonel maliyetler düşürülür.",
+            "position": { "x": 5000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-6",
+            "type": "list",
+            "title": "Sürdürülebilir Tedarik Zinciri",
+            "subtitle": "Sorumlu Kaynak Yönetimi",
+            "items": [
+                "**Tedarikçi Değerlendirmesi**: ESG kriterlerine göre seçim",
+                "**Yerel Kaynak Kullanımı**: Karbon ayak izini azaltma",
+                "**Şeffaflık**: Tedarik zinciri görünürlüğü ve izlenebilirlik",
+                "**İşbirliği**: Tedarikçilerle sürdürülebilirlik ortaklıkları",
+                "**Risk Yönetimi**: Çevresel ve sosyal risk değerlendirmesi"
+            ],
+            "position": { "x": 6000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-7",
+            "type": "content",
+            "title": "Sosyal Etki Ölçümü",
+            "subtitle": "Toplumsal Değer Yaratma",
+            "content": "**Sosyal getiri yatırımı (SROI)** metodolojisi ile toplumsal projelerin **nicel etkisi** ölçülür ve **paydaş değeri** maksimize edilir.",
+            "position": { "x": 7000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-8",
+            "type": "comparison",
+            "title": "Kısa Vadeli vs Uzun Vadeli Yaklaşım",
+            "items": [
+                "Kısa vadeli: Hızlı kar, maliyet odaklı, reaktif yaklaşım",
+                "Uzun vadeli: Sürdürülebilir değer, yatırım odaklı, proaktif yaklaşım",
+                "Kısa vadeli: Paydaş çıkarları ikinci planda, risk alma",
+                "Uzun vadeli: Paydaş değeri odaklı, risk yönetimi, inovasyon"
+            ],
+            "position": { "x": 8000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-9",
+            "type": "content",
+            "title": "Sürdürülebilirlik ROI",
+            "subtitle": "Finansal ve Finansal Olmayan Getiriler",
+            "content": "Sürdürülebilirlik yatırımları **maliyet tasarrufu**, **risk azaltımı**, **marka değeri artışı** ve **yetenek çekme** gibi çoklu faydalar sağlar.",
+            "position": { "x": 9000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-10",
+            "type": "quote",
+            "title": "Mahatma Gandhi",
+            "content": "Dünya, herkesin ihtiyacını karşılayacak kadar zengindir, ama kimsenin açgözlülüğünü karşılayacak kadar değil.",
+            "subtitle": "Barış ve Adalet Lideri",
+            "position": { "x": 10000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-11",
+            "type": "title",
+            "title": "Teşekkürler",
+            "subtitle": "Sürdürülebilir Gelecek İçin Birlikte",
+            "content": "Sürdürülebilir Büyüme Stratejileri sunumu tamamlandı",
+            "position": { "x": 11000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        }
+    ]
+}
+

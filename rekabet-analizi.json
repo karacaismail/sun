@@ -1,0 +1,145 @@
+{
+    "title": "Rekabet Analizi ve Pazar Dinamikleri",
+    "subtitle": "Stratejik Rekabet Avantajı Yaratma",
+    "author": "Manus AI",
+    "date": "2025",
+    "slides": [
+        {
+            "id": "slide-0",
+            "type": "title",
+            "title": "Rekabet Analizi ve Pazar Dinamikleri",
+            "subtitle": "Stratejik Rekabet Avantajı Yaratma",
+            "content": "Pazar liderliği için kritik analiz teknikleri",
+            "position": { "x": 0, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-1",
+            "type": "content",
+            "title": "Rekabet Analizi Nedir?",
+            "subtitle": "Temel Kavramlar ve Önem",
+            "content": "Rekabet analizi, işletmelerin **pazar konumlarını** güçlendirmek ve **sürdürülebilir rekabet avantajı** yaratmak için rakiplerini sistematik olarak değerlendirme sürecidir.",
+            "position": { "x": 1000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-2",
+            "type": "list",
+            "title": "Rekabet Analizi Bileşenleri",
+            "subtitle": "Kapsamlı Değerlendirme Kriterleri",
+            "items": [
+                "**Pazar Payı Analizi**: Rakiplerin pazar konumları ve büyüme trendleri",
+                "**Ürün/Hizmet Karşılaştırması**: Özellikler, kalite ve fiyat analizi",
+                "**Finansal Performans**: Gelir, karlılık ve büyüme oranları",
+                "**Pazarlama Stratejileri**: Marka konumlandırma ve iletişim yaklaşımları",
+                "**Operasyonel Verimlilik**: Süreçler, teknoloji ve kaynak kullanımı"
+            ],
+            "position": { "x": 2000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-3",
+            "type": "content",
+            "title": "Doğrudan ve Dolaylı Rakipler",
+            "subtitle": "Rekabet Haritasının Çıkarılması",
+            "content": "**Doğrudan rakipler** aynı müşteri segmentine benzer ürünler sunarken, **dolaylı rakipler** farklı çözümlerle aynı ihtiyacı karşılar. Her iki grup da stratejik planlamada dikkate alınmalıdır.",
+            "position": { "x": 3000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-4",
+            "type": "chart",
+            "title": "Rekabet Konumlandırma Matrisi",
+            "subtitle": "Pazar Payı vs Büyüme Hızı",
+            "content": "Bu matris, rakipleri **pazar payı** ve **büyüme hızı** kriterlerine göre kategorize ederek stratejik önceliklerin belirlenmesine yardımcı olur.",
+            "position": { "x": 4000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-5",
+            "type": "content",
+            "title": "SWOT vs Rakip Analizi",
+            "subtitle": "Karşılaştırmalı Değerlendirme",
+            "content": "Kendi **SWOT analizimizi** rakiplerin analizi ile karşılaştırarak, **rekabet boşluklarını** ve **fırsat alanlarını** belirleyebiliriz.",
+            "position": { "x": 5000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-6",
+            "type": "list",
+            "title": "Rekabet İstihbaratı Kaynakları",
+            "subtitle": "Veri Toplama Yöntemleri",
+            "items": [
+                "**Halka Açık Finansal Raporlar**: Yıllık raporlar ve SEC dosyaları",
+                "**Pazar Araştırması Raporları**: Sektör analizleri ve trend raporları",
+                "**Dijital İzleme**: Web sitesi trafiği, sosyal medya aktivitesi",
+                "**Müşteri Geri Bildirimleri**: Anketler ve odak grup çalışmaları",
+                "**Saha Gözlemleri**: Mağaza ziyaretleri ve etkinlik katılımları"
+            ],
+            "position": { "x": 6000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-7",
+            "type": "content",
+            "title": "Fiyatlandırma Stratejisi Analizi",
+            "subtitle": "Rekabetçi Fiyat Konumlandırması",
+            "content": "Rakiplerin **fiyatlandırma modellerini** analiz ederek, **değer önerimimizi** optimize edebilir ve **fiyat elastikiyetini** değerlendirebiliriz.",
+            "position": { "x": 7000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-8",
+            "type": "comparison",
+            "title": "Güçlü vs Zayıf Rakipler",
+            "items": [
+                "Güçlü rakipler: Yüksek pazar payı, güçlü marka, finansal istikrar",
+                "Zayıf rakipler: Düşük pazar payı, sınırlı kaynaklar, operasyonel sorunlar",
+                "Yükselen rakipler: Hızlı büyüme, yenilikçi yaklaşım, agresif pazarlama",
+                "Düşen rakipler: Azalan pazar payı, eski teknoloji, müşteri kaybı"
+            ],
+            "position": { "x": 8000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-9",
+            "type": "content",
+            "title": "Rekabetçi Tepki Stratejileri",
+            "subtitle": "Proaktif ve Reaktif Yaklaşımlar",
+            "content": "Rakip hareketlerine karşı **hızlı tepki** verebilmek için önceden planlanmış **senaryo analizleri** ve **acil durum planları** hazırlanmalıdır.",
+            "position": { "x": 9000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-10",
+            "type": "quote",
+            "title": "Sun Tzu",
+            "content": "Kendini ve düşmanını bil; yüz savaşta yüz zafer kazanırsın.",
+            "subtitle": "Savaş Sanatı",
+            "position": { "x": 10000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        },
+        {
+            "id": "slide-11",
+            "type": "title",
+            "title": "Teşekkürler",
+            "subtitle": "Rekabetçi Avantaj Yaratmaya Devam",
+            "content": "Rekabet Analizi sunumu tamamlandı",
+            "position": { "x": 11000, "y": 0, "z": 0 },
+            "rotation": 0,
+            "scale": 1
+        }
+    ]
+}
+
