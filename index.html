@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Sunum Sistemi</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Flowbite CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Impress.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/impress.js@2.0.0/js/impress.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+        
+        .impress-enabled .step {
+            margin: 0;
+            opacity: 0.3;
+            transition: opacity 1s;
+        }
+        
+        .impress-enabled .step.active {
+            opacity: 1;
+        }
+        
+        .step {
+            position: relative;
+            width: 900px;
+            padding: 40px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            font-size: 48px;
+            line-height: 1.5;
+        }
+        
+        .slide-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+        
+        .slide-subtitle {
+            font-size: 1.5rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .slide-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        
+        .slide-list {
+            font-size: 1.1rem;
+            color: #374151;
+        }
+        
+        .slide-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1rem;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #374151;
+            z-index: 1000;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2000;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p class="text-lg font-semibold text-gray-700">Sunum yükleniyor...</p>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+    
+    <!-- Slide Counter -->
+    <div id="slide-counter" class="slide-counter hidden">
+        <span id="current-slide">1</span> / <span id="total-slides">1</span>
+    </div>
+    
+    <!-- Presentation Container -->
+    <div id="impress" class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Tarayıcınız bu sunumu desteklemiyor. Lütfen modern bir tarayıcı kullanın.</p>
+        </div>
+    </div>
+    
+    <!-- Navigation Controls -->
+    <div id="navigation" class="navigation hidden">
+        <button id="prev-btn" class="nav-btn">
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Önceki
+        </button>
+        <button id="next-btn" class="nav-btn">
+            Sonraki
+            <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <button id="overview-btn" class="nav-btn">
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+            </svg>
+            Genel Bakış
+        </button>
+    </div>
+    
+    <!-- Data Import Controls -->
+    <div id="data-controls" class="fixed top-20 left-20 z-50 bg-white p-4 rounded-lg shadow-lg hidden">
+        <h3 class="text-lg font-semibold mb-3">Sunum Yükle</h3>
+        <div class="space-y-2">
+            <button onclick="loadPresentation('data1.js')" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                İşletme Stratejisi Temelleri
+            </button>
+            <button onclick="loadPresentation('data2.js')" class="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+                Rekabet Analizi
+            </button>
+            <button onclick="loadPresentation('data3.js')" class="w-full px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">
+                Dijital Dönüşüm Stratejileri
+            </button>
+            <button onclick="loadPresentation('data4.js')" class="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+                Sürdürülebilir Büyüme
+            </button>
+        </div>
+        <button onclick="toggleDataControls()" class="mt-3 w-full px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
+            Kapat
+        </button>
+    </div>
+    
+    <!-- Toggle Data Controls Button -->
+    <button onclick="toggleDataControls()" class="fixed top-20 left-20 z-40 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+        </svg>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="data.js"></script>
+    <script src="engine.js"></script>
+    <script src="renderer.js"></script>
+    
+    <script>
+        // Global functions for data controls
+        function toggleDataControls() {
+            const controls = document.getElementById('data-controls');
+            controls.classList.toggle('hidden');
+        }
+        
+        function loadPresentation(dataFile) {
+            // Dynamically load different data files
+            const script = document.createElement('script');
+            script.src = dataFile;
+            script.onload = function() {
+                // Re-initialize presentation with new data
+                if (window.presentationData) {
+                    initializePresentation();
+                }
+            };
+            document.head.appendChild(script);
+            toggleDataControls();
+        }
+    </script>
+</body>
+</html>
+
